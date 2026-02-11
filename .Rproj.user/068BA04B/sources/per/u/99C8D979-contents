@@ -1,0 +1,12 @@
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("Biostrings")
+library("Biostrings")
+# Specify the path to your FASTA file
+fasta_file_path <- "your_sequence_file.fasta"
+
+# Use the fasta.seqlengths function to get a named vector of lengths
+sequence_lengths <- fasta.seqlengths(fasta_file_path)
+
+# Print the lengths
+print(sequence_lengths)
