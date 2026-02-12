@@ -16,33 +16,31 @@ library("stringr")
 # created subfolder 
 setwd("Labsix")
 
-seq1 <- read.fasta("BWseq1.fasta")
-
-# msa
+# doing msa on combined file
 read.fasta("BWseqs.fasta")
 mySequences <- readDNAStringSet("BWseqs.fasta")
 names(mySequences) <- c("mitochondrion", "ADRB2", "OPN1SW", "DMP1", "EWF1415")
+msaalign <- msaMuscle(mySequences)
 
 # msa analysis: length, gaps, GC content
-msaalign <- msaMuscle(mySequences)
 print(msaalign, show="complete")
 convert <- as(msaalign, "DNAStringSet")
 letterFrequency(convert, "-")
 letterFrequency(convert, "GC")
 letterFrequency(convert, letters="GC", as.prob = TRUE)
 
-# converting to seqinr format & compute distance matrix
+# converting to seqinr format & computing distance matrix
 msaseqinr <- msaConvert(msaalign, type="seqinr::alignment")
 as.matrix(dist.alignment(msaseqinr, "identity"))
 
-# translating 1 file into amino acid sequence
+# translating 1 file into amino acid seq
 read.fasta("BWseq2.fasta")
 dna_seq <- readDNAStringSet("BWseq2.fasta")
-dna_seq <- dna_seq[width(dna_seq) > 0]
+dna_seq <- dna_seq[width(dna_seq) > 0]  # ensuring no downstream errors
 aa_seq <- Biostrings::translate(dna_seq)
 aa_seq
 
-# write alignment to a file
+# writing alignment to a file
 Alignment_phyDat <- msaConvert(msaalign, type="phangorn::phyDat")
 write.phyDat(Alignment_phyDat, "alignment.fasta", format = "fasta")
 
