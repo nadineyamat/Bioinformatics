@@ -41,4 +41,3 @@ aa_seq
 # writing alignment to a file
 Alignment_phyDat <- msaConvert(msaalign, type="phangorn::phyDat")
 write.phyDat(Alignment_phyDat, "alignment.fasta", format = "fasta")
-msa
