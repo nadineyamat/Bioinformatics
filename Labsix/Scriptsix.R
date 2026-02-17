@@ -10,10 +10,10 @@
 library("Biostrings") 
 library("seqinr")
 library("phangorn")
-library(msa)
+library("msa")
 library("stringr")
 
-# created subfolder 
+# seting wd to sub-folder 
 setwd("Labsix")
 
 # doing msa on combined file
@@ -26,7 +26,6 @@ msaalign <- msaMuscle(mySequences)
 print(msaalign, show="complete")
 convert <- as(msaalign, "DNAStringSet")
 letterFrequency(convert, "-")
-letterFrequency(convert, "GC")
 letterFrequency(convert, letters="GC", as.prob = TRUE)
 
 # converting to seqinr format & computing distance matrix
@@ -36,11 +35,10 @@ as.matrix(dist.alignment(msaseqinr, "identity"))
 # translating 1 file into amino acid seq
 read.fasta("BWseq2.fasta")
 dna_seq <- readDNAStringSet("BWseq2.fasta")
-dna_seq <- dna_seq[width(dna_seq) > 0]  # ensuring no downstream errors
 aa_seq <- Biostrings::translate(dna_seq)
 aa_seq
 
 # writing alignment to a file
 Alignment_phyDat <- msaConvert(msaalign, type="phangorn::phyDat")
 write.phyDat(Alignment_phyDat, "alignment.fasta", format = "fasta")
-
+msa
