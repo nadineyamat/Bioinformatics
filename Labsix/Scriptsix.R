@@ -15,7 +15,7 @@ library("stringr")
 
 # seting wd to sub-folder 
 setwd("Labsix")
-
+setwd("..")
 # doing msa on combined file
 read.fasta("BWseqs.fasta")
 mySequences <- readDNAStringSet("BWseqs.fasta")
@@ -37,6 +37,7 @@ read.fasta("BWseq2.fasta")
 dna_seq <- readDNAStringSet("BWseq2.fasta")
 aa_seq <- Biostrings::translate(dna_seq)
 aa_seq
+writeXStringSet(aa_seq, "amino", format="fasta")
 
 # writing alignment to a file
 Alignment_phyDat <- msaConvert(msaalign, type="phangorn::phyDat")
