@@ -15,10 +15,13 @@ head(uniprot_vector)
 # Obtaining Gene Ontology terms
 geneonto <- GetProteinGOInfo(uniprot_vector)
 
+# Some interesting terms includes "regulation of mitotic nuclear division for 
+# biological processes, and regulation of chromosome segregation"
+
 # Plotting results
 plotgeneonto <- PlotGoInfo(geneonto)
 
-# Commmand failed; Checking if Gene Ontology results include all 3 key terms
+# Command failed; Checking if Gene Ontology results include all 3 key terms
 print(geneonto)
 
 # N/A for molecular info; plotting Subcellular & Biological info
@@ -34,6 +37,8 @@ knowndiseases <- GetPathology_Biotech(uniprot_vector)
 print(knowndiseases)
 diseases <- Get.diseases(knowndiseases)
 print(diseases)
+
+# N/A and Null for both pathology and disease information
 
 # Accessing structural information 
 untiprotdata <- fetch_uniprot(uniprot_vector)
