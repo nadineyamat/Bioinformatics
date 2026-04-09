@@ -1,0 +1,7 @@
+# install raxml-ng
+brew install raxml-ng
+
+# estimate phylogeny tree
+raxml-ng --msa metazoa_alignment.5k.fasta --model GTR+G
+
+# chose maximum likelihood over Bayesian because We were given concecated alignments, which work best for maximum likelihood. 

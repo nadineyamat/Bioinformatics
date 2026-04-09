@@ -1,0 +1,165 @@
+
+RAxML-NG v. 2.0.0-dev released on 11.03.2026 by The Exelixis Lab.
+Developed by: Oleksiy M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth,
+              Julia Haag, Anastasis Togkousidis, Julius Wiegert, Christoph Stelz.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i7-1060NG7 CPU @ 1.20GHz, 4 cores, 16 GB RAM
+
+RAxML-NG was called at 09-Apr-2026 12:08:43 as follows:
+
+raxml-ng --msa metazoa_alignment.5k.fasta --model GTR+G
+
+Analysis options:
+  run mode: ML tree search (adaptive)
+  start tree(s): adaptive
+  random seed: 1775750923
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  stopping rule: OFF
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  FreeRate optimization method: AUTO
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: metazoa_alignment.5k.fasta
+[00:00:00] Loaded alignment with 22 taxa and 5000 sites
+
+Alignment comprises 1 partitions and 4496 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 5000 / 4496
+Gaps: 33.05 %
+Invariant sites: 11.02 %
+
+
+[00:00:00] Adaptive mode: Predicting difficulty of the MSA ...
+[00:00:00] Parallel parsimony: 24 trees with 4 threads
+[00:00:00] Predicted difficulty: 0.16
+
+NOTE: Binary MSA file created: metazoa_alignment.5k.fasta.raxml.rba
+
+[00:00:00] Generating 1 random starting tree(s) with 22 taxa
+[00:00:00] Generating 5 parsimony starting tree(s) with 22 taxa
+Parallelization scheme: 1 worker(s) x 4 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 1124 / 17984
+[00:00:00] Data distribution: max. searches per worker: 6
+
+Starting ML tree search with 6 distinct starting trees
+
+[00:00:00 -85439.848428] Heuristic: adaptive, stopping rules: off, epsilon = 10.000000
+[00:00:00 -85439.848428] Initial branch length optimization
+[00:00:00 -78260.444330] Model parameter optimization (eps = 10.000000)
+[00:00:00 -77266.890070] FAST spr round 1 (radius: 19)
+[00:00:01 -74837.517706] FAST spr round 2 (radius: 19)
+[00:00:01 -74783.285785] FAST spr round 3 (radius: 19)
+[00:00:01 -74767.892317] FAST spr round 4 (radius: 19)
+[00:00:01 -74767.237006] Model parameter optimization (eps = 3.000000)
+[00:00:02 -74745.177144] SLOW spr round 1 (radius: 7)
+[00:00:03 -74727.852011] SLOW spr round 2 (radius: 7)
+[00:00:04 -74725.420928] SLOW spr round 3 (radius: 14)
+[00:00:04 -74725.381486] Model parameter optimization (eps = 0.100000)
+
+[00:00:04] ML tree search #1, logLikelihood: -74724.662493
+
+[00:00:04 -79650.514549] Heuristic: adaptive, stopping rules: off, epsilon = 10.000000
+[00:00:04 -79650.514549] Initial branch length optimization
+[00:00:04 -75715.830384] Model parameter optimization (eps = 10.000000)
+[00:00:04 -74841.593676] FAST spr round 1 (radius: 19)
+[00:00:05 -74739.217124] FAST spr round 2 (radius: 19)
+[00:00:05 -74728.971437] FAST spr round 3 (radius: 19)
+[00:00:06 -74724.435485] Model parameter optimization (eps = 3.000000)
+[00:00:06 -74722.652812] SLOW spr round 1 (radius: 7)
+[00:00:07 -74721.905269] SLOW spr round 2 (radius: 14)
+[00:00:07 -74721.893246] Model parameter optimization (eps = 0.100000)
+
+[00:00:08] ML tree search #2, logLikelihood: -74721.300233
+
+[00:00:08 -80125.634016] Heuristic: adaptive, stopping rules: off, epsilon = 10.000000
+[00:00:08 -80125.634016] Initial branch length optimization
+[00:00:08 -75696.126924] Model parameter optimization (eps = 10.000000)
+[00:00:08 -74822.510561] FAST spr round 1 (radius: 19)
+[00:00:08 -74748.889310] FAST spr round 2 (radius: 19)
+[00:00:09 -74744.084107] Model parameter optimization (eps = 3.000000)
+[00:00:09 -74742.176173] SLOW spr round 1 (radius: 7)
+[00:00:10 -74721.952830] SLOW spr round 2 (radius: 7)
+[00:00:12 -74721.854357] SLOW spr round 3 (radius: 14)
+[00:00:12 -74721.852867] Model parameter optimization (eps = 0.100000)
+
+[00:00:12] ML tree search #3, logLikelihood: -74721.308116
+
+[00:00:12 -80019.791387] Heuristic: adaptive, stopping rules: off, epsilon = 10.000000
+[00:00:12 -80019.791387] Initial branch length optimization
+[00:00:12 -75772.137655] Model parameter optimization (eps = 10.000000)
+[00:00:12 -74901.405615] FAST spr round 1 (radius: 19)
+[00:00:13 -74761.596215] FAST spr round 2 (radius: 19)
+[00:00:13 -74736.121068] FAST spr round 3 (radius: 19)
+[00:00:13 -74730.698064] Model parameter optimization (eps = 3.000000)
+[00:00:13 -74729.074349] SLOW spr round 1 (radius: 7)
+[00:00:15 -74722.509920] SLOW spr round 2 (radius: 14)
+[00:00:15 -74722.468301] Model parameter optimization (eps = 0.100000)
+
+[00:00:15] ML tree search #4, logLikelihood: -74721.851253
+
+[00:00:15 -80177.233290] Heuristic: adaptive, stopping rules: off, epsilon = 10.000000
+[00:00:15 -80177.233290] Initial branch length optimization
+[00:00:15 -75719.022205] Model parameter optimization (eps = 10.000000)
+[00:00:16 -74849.167885] FAST spr round 1 (radius: 19)
+[00:00:16 -74796.923105] FAST spr round 2 (radius: 19)
+[00:00:17 -74758.798755] FAST spr round 3 (radius: 19)
+[00:00:17 -74751.496074] Model parameter optimization (eps = 3.000000)
+[00:00:17 -74749.782673] SLOW spr round 1 (radius: 7)
+[00:00:19 -74726.209988] SLOW spr round 2 (radius: 7)
+[00:00:20 -74725.863027] SLOW spr round 3 (radius: 14)
+[00:00:21 -74725.834627] Model parameter optimization (eps = 0.100000)
+
+[00:00:21] ML tree search #5, logLikelihood: -74725.579763
+
+[00:00:21 -79935.893580] Heuristic: adaptive, stopping rules: off, epsilon = 10.000000
+[00:00:21 -79935.893580] Initial branch length optimization
+[00:00:21 -75649.269491] Model parameter optimization (eps = 10.000000)
+[00:00:21 -74776.296129] FAST spr round 1 (radius: 19)
+[00:00:22 -74732.744314] FAST spr round 2 (radius: 19)
+[00:00:22 -74729.229679] Model parameter optimization (eps = 3.000000)
+[00:00:22 -74727.512024] SLOW spr round 1 (radius: 7)
+[00:00:24 -74722.464817] SLOW spr round 2 (radius: 14)
+[00:00:24 -74722.281384] Model parameter optimization (eps = 0.100000)
+
+[00:00:24] ML tree search #6, logLikelihood: -74721.908794
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.693224 (ML),  weights&rates: (0.250000,0.072741) (0.250000,0.360315) (0.250000,0.922331) (0.250000,2.644612) 
+   Base frequencies (ML): 0.275279 0.245827 0.265830 0.213064 
+   Substitution rates (ML): 2.135739 2.959931 1.159024 1.472488 3.989891 1.000000 
+
+
+Final LogLikelihood: -74721.300233
+
+AIC score: 149542.600466 / AICc score: 149543.630977 / BIC score: 149868.460126
+Free parameters (model + branch lengths): 50
+
+Best ML tree saved to: /Users/nadineyamat2429/Documents/GitHub/Bioinformatics/midterm2/metazoa_alignment.5k.fasta.raxml.bestTree
+All ML trees saved to: /Users/nadineyamat2429/Documents/GitHub/Bioinformatics/midterm2/metazoa_alignment.5k.fasta.raxml.mlTrees
+Optimized model saved to: /Users/nadineyamat2429/Documents/GitHub/Bioinformatics/midterm2/metazoa_alignment.5k.fasta.raxml.bestModel
+
+Execution log saved to: /Users/nadineyamat2429/Documents/GitHub/Bioinformatics/midterm2/metazoa_alignment.5k.fasta.raxml.log
+
+Analysis started: 09-Apr-2026 12:08:43 / finished: 09-Apr-2026 12:09:08
+
+Elapsed time: 24.807 seconds
+
